@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+            crossorigin="anonymous"
+        />
+        <title>Sala de espera</title>
+    </head>
+    <body style="background-image: url(/public/img/background.png)">
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <div class="container py-3 px-auto" style="height: 100vh; color: white">
+            <div
+                class="container p-2 rounded-3"
+                style="background-color: #ca5310"
+            >
+                <div
+                    class="container p-2 rounded-3"
+                    style="background-color: #bb4d00"
+                >
+                    <h4>Sala de chat</h4>
+                    <div
+                        class="container my-2"
+                        style="height: 70vh; overflow: auto"
+                    >
+                        <ul
+                            id="mensajes"
+                            class="list-group list-group-flush"
+                        ></ul>
+                    </div>
+                    <hr />
+                    <div class="row m-0 p-1" style="height: auto">
+                        <div class="col m-0 p-0">
+                            <a
+                                href="/"
+                                class="btn rounded-0"
+                                style="
+                                    background-color: #343434;
+                                    color: white;
+                                    width: 100%;
+                                    height: 100%;
+                                "
+                            >
+                                Salir
+                            </a>
+                        </div>
+                        <div class="col-10 m-0 p-0">
+                            <input id="user" type="hidden" value="<%= user%>" />
+                            <input
+                                class="form-control rounded-0"
+                                style="width: 100%; height: 100%"
+                                id="chat-box"
+                            />
+                        </div>
+                        <div class="col m-0 p-0">
+                            <button
+                                class="btn rounded-0"
+                                style="
+                                    background-color: #343434;
+                                    color: white;
+                                    width: 100%;
+                                    height: 100%;
+                                "
+                                id="send"
+                            >
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/public/js/chat.js"></script>
+    </body>
+</html>
